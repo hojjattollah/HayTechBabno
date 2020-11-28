@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:filterBox="http://schemas.android.com/apk/res-auto"
+    xmlns:hamburgerMenu="http://schemas.android.com/apk/res-auto"
+    xmlns:searchBox="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.example.babnowidgets.custom.ClockView
+        android:id="@+id/clockView"
+        android:layout_width="264dp"
+        android:layout_height="203dp"
+        app:layout_constraintBottom_toTopOf="@+id/valueSelector"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cv_searchBox" />
+
+    <com.example.babnowidgets.button.HamburgerButtonMenu
+        android:id="@+id/cv_hamburgerButtonMenu"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginRight="20dp"
+        app:layout_constraintBottom_toTopOf="@+id/guideline2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/guideline2"
+        hamburgerMenu:cv_borderColor="@color/gray"
+        hamburgerMenu:cv_borderRadius="12dp"
+        hamburgerMenu:cv_borderSize="2dp"
+        hamburgerMenu:cv_iconScaleType="center"
+        hamburgerMenu:cv_iconSource="@drawable/ic_hamburger_menu" />
+
+
+    <com.example.babnowidgets.custom.ValueSelector
+        android:id="@+id/valueSelector"
+        android:layout_width="144dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/guideline5"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="@+id/guideline"
+        app:layout_constraintTop_toBottomOf="@+id/cv_filterBox"
+        app:layout_constraintVertical_bias="0.965"
+        app:leftText="Text Left"
+        app:rightText="Text Right" />
+
+    <com.example.babnowidgets.textview.FilterBox
+        android:id="@+id/cv_filterBox"
+        android:layout_width="380dp"
+        android:layout_height="63dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.516"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/guideline2"
+        app:layout_constraintVertical_bias="0.11"
+
+        filterBox:cv_sb_borderEmptyStateColor="@color/gray"
+        filterBox:cv_sb_borderEmptyStateDashGap="5dp"
+        filterBox:cv_sb_borderEmptyStateDashWith="5dp"
+        filterBox:cv_sb_borderEmptyStateRadius="12dp"
+        filterBox:cv_sb_borderEmptyStateSize="2dp"
+
+        filterBox:cv_sb_borderTextStateColor="@color/black"
+        filterBox:cv_sb_borderTextStateDashGap="5dp"
+        filterBox:cv_sb_borderTextStateDashWith="5dp"
+        filterBox:cv_sb_borderTextStateRadius="12dp"
+        filterBox:cv_sb_borderTextStateSize="2dp"
+
+        filterBox:cv_sb_clearIconScaleType="center"
+        filterBox:cv_sb_clearIconSource="@drawable/ic_close_black_24dp"
+        filterBox:cv_sb_clearIconVisibility="gone"
+        filterBox:cv_sb_searchIconScaleType="center"
+        filterBox:cv_sb_searchIconSource="@drawable/ic_search_black_24dp"
+        filterBox:cv_sb_searchIconVisibility="visible" />
+
+    <com.example.babnowidgets.textview.SearchBox
+        android:id="@+id/cv_searchBox"
+        android:layout_width="340dp"
+        android:layout_height="87dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.492"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/guideline2"
+        app:layout_constraintVertical_bias="0.323"
+
+        searchBox:cv_sv_containerEmptyStateBackground="@drawable/border_corner12_stroke2_gray"
+        searchBox:cv_sv_containerTextStateBackground="@drawable/border_corner12_stroke2_black"
+
+        searchBox:cv_sv_editTextHint="@string/inter_insurance_draft_number"
+
+        searchBox:cv_sv_searchButtonBackground="@drawable/border_corner12_stroke1_white_bg_green1000"
+        searchBox:cv_sv_searchButtonText="@string/inquiry"
+
+        />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_end="381dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="100dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_end="30dp" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
