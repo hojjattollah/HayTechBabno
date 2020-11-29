@@ -32,8 +32,9 @@
         android:id="@+id/cv_multiButtonView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:cv_mbv_itemCount="50"
-        app:cv_mbv_itemDefaultSelect="2"
+        app:cv_mbv_itemCount="31"
+        app:cv_mbv_itemDefaultSelect="8"
+        app:cv_mbv_itemColumn="7"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
